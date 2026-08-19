@@ -1,7 +1,7 @@
 package ring
 
 func (r *Ring) replaceKeys(next []uint32) {
-	r.keys = append(r.keys, next...)
+	r.keys = next
 }
 
 // Members returns all physical node names currently in the ring.

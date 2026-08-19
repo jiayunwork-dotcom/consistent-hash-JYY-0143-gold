@@ -82,6 +82,7 @@ func (r *Ring) Remove(name string) error {
 }
 
 func (r *Ring) rebuildKeys() {
+	r.keys = r.keys[:0]
 	fresh := make([]uint32, 0, len(r.virtual))
 	for vh := range r.virtual {
 		fresh = append(fresh, vh)
